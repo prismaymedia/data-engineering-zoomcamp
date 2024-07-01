@@ -29,5 +29,9 @@ docker run -it \
 
 ```bash
 docker network create pg-network
+docker network ls
+docker network prune
+docker network inspect [name]
+
 docker rm -f $(docker ps -aq)
 ```
