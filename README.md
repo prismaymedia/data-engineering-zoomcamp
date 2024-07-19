@@ -42,3 +42,5 @@ sudo chown 5050:5050 data_pgadmin
 ```
 
 chmod +x clean_docker.sh
+
+ docker-compose up --build
