@@ -16,6 +16,8 @@ services:
 
   pgadmin:
     image: dpage/pgadmin4:latest
+    volumes:
+      - ./data_pgadmin:/var/lib/pgadmin
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.com
       PGADMIN_DEFAULT_PASSWORD: root
@@ -23,7 +25,6 @@ services:
       - "8080:80"
     depends_on:
       - pgdatabase
-    # network_mode: service:pgdatabase
     networks:
       - pg-network
 

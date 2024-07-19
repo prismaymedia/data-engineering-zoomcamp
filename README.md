@@ -35,3 +35,10 @@ docker network inspect [name]
 
 docker rm -f $(docker ps -aq)
 ```
+
+```bash
+mkdir data_pgadmin
+sudo chown 5050:5050 data_pgadmin
+```
+
+chmod +x clean_docker.sh

@@ -35,7 +35,7 @@ def main():
     df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
 
     df.head(n=0).to_sql(name=table_name, con=engine, if_exists='replace')
-    # df.to_sql(name=table_name, con=engine, if_exists='append')
+    df.to_sql(name=table_name, con=engine, if_exists='append')
 
     while True:
         try:
